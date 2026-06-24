@@ -187,15 +187,29 @@ nav {
   font-size:clamp(2rem,3.5vw,3rem); font-weight:700; line-height:1.2;
   margin-top:12px; max-width:560px;
 }
+.loc-cards-main { display:grid; grid-template-columns:1fr; gap:16px; margin-bottom:16px; }
+@media(min-width:768px){ .loc-cards-main{grid-template-columns:repeat(3,1fr);} }
+.loc-card {
+  background:var(--card); border:1px solid var(--border); border-radius:16px;
+  padding:24px; display:flex; align-items:stretch; gap:0;
+}
+.loc-card-question {
+  font-family:'Playfair Display',serif;
+  font-size:1.05rem; font-weight:700; line-height:1.3;
+  color:var(--fg); flex:0 0 auto; max-width:110px;
+  display:flex; align-items:center;
+}
+.loc-card-divider {
+  width:1px; background:var(--border); flex-shrink:0; margin:0 20px;
+}
 .loc-blocks { display:grid; grid-template-columns:1fr; gap:16px; margin-bottom:48px; }
 @media(min-width:640px){ .loc-blocks{grid-template-columns:repeat(2,1fr);} }
-@media(min-width:1024px){ .loc-blocks{grid-template-columns:repeat(5,1fr);} }
 .loc-block {
   background:var(--card); border:1px solid var(--border); border-radius:16px;
   padding:24px 20px;
 }
 .loc-block-label { font-size:10px; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--bronze); margin-bottom:14px; }
-.loc-items { display:flex; flex-direction:column; gap:7px; }
+.loc-items { display:flex; flex-direction:column; gap:7px; justify-content:center; }
 .loc-item { font-size:.88rem; color:var(--muted-fg); display:flex; align-items:baseline; gap:6px; }
 .loc-item strong { color:var(--fg); font-weight:500; }
 .loc-map {
@@ -601,19 +615,19 @@ nav {
         </div>
       </div>
       <div class="loc-block">
-        <div class="loc-block-label">Mercado</div>
+        <div class="loc-block-label">Compras</div>
         <div class="loc-items">
-          <span class="loc-item"><strong>Supermercado</strong> a 5 min</span>
-          <span class="loc-item"><strong>Farmácias</strong> a 4 min</span>
-          <span class="loc-item"><strong>Padaria</strong> a 3 min</span>
+          <span class="loc-item"><strong>Supermercado</strong> a 1 min</span>
+          <span class="loc-item"><strong>Farmácias</strong> a 1 min</span>
+          <span class="loc-item"><strong>Hortifruti</strong> a 2 min</span>
         </div>
       </div>
       <div class="loc-block">
-        <div class="loc-block-label">Serviços</div>
+        <div class="loc-block-label">Outros Serviços</div>
         <div class="loc-items">
-          <span class="loc-item"><strong>UPA</strong> a 5 min</span>
-          <span class="loc-item"><strong>Banco</strong> a 4 min</span>
-          <span class="loc-item"><strong>Cartório</strong> a 5 min</span>
+          <span class="loc-item"><strong>UPA</strong> a 4 min</span>
+          <span class="loc-item"><strong>Banco</strong> a 2 min</span>
+          <span class="loc-item"><strong>Posto de combustível</strong> a 1 min</span>
         </div>
       </div>
     </div>
