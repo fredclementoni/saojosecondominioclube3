@@ -456,16 +456,14 @@ nav {
 /* ── FLOATING WA ── */
 .wa-float {
   position:fixed; right:24px; bottom:28px; z-index:50;
-  display:flex; align-items:center; gap:10px;
-  padding:14px 22px; border-radius:9999px;
+  display:flex; align-items:center; justify-content:center;
+  width:56px; height:56px; border-radius:50%;
   background:#25D366; color:#fff;
-  font-size:13px; font-weight:700; letter-spacing:.03em;
   box-shadow:0 8px 32px rgba(37,211,102,.40);
   transition:transform .2s, box-shadow .2s;
 }
 .wa-float:hover { transform:translateY(-3px); box-shadow:0 12px 40px rgba(37,211,102,.50); }
-.wa-float svg { width:22px; height:22px; fill:#fff; flex-shrink:0; }
-@media(max-width:480px){ .wa-float span { display:none; } .wa-float { padding:14px; } }
+.wa-float svg { width:28px; height:28px; fill:#fff; }
 
 </style>
 </head>
