@@ -143,18 +143,30 @@ nav {
   background:var(--card); border:1px solid var(--border); border-radius:20px;
   padding:48px 36px; text-align:center;
   transition:transform .3s, box-shadow .3s;
+  position:relative; overflow:hidden;
 }
 .pilar-card:hover { transform:translateY(-6px); box-shadow:var(--sh-el); }
+.pilar-card-video {
+  position:absolute; inset:0; width:100%; height:100%;
+  object-fit:cover; z-index:0;
+  pointer-events:none;
+}
+.pilar-card-overlay {
+  position:absolute; inset:0; z-index:1;
+  background:rgba(250,248,243,.88);
+}
 .pilar-icon {
   width:64px; height:64px; border-radius:16px;
   background:var(--muted); display:flex; align-items:center; justify-content:center;
   margin:0 auto 24px; font-size:28px;
+  position:relative; z-index:2;
 }
 .pilar-title {
   font-family:'Playfair Display',serif;
   font-size:1.35rem; font-weight:700; margin-bottom:12px;
+  position:relative; z-index:2;
 }
-.pilar-text { font-size:.95rem; color:var(--muted-fg); line-height:1.7; }
+.pilar-text { font-size:.95rem; color:var(--muted-fg); line-height:1.7; position:relative; z-index:2; }
 
 /* ── ROTINA ── */
 #rotina { padding:100px 0; background:var(--charcoal); color:#fff; }
