@@ -246,35 +246,40 @@ nav {
   font-size:clamp(2rem,3.5vw,3rem); font-weight:700; line-height:1.2;
   margin-top:12px;
 }
-.plantas-grid { display:grid; grid-template-columns:1fr; gap:48px; }
+.plantas-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
 @media(min-width:768px){ .plantas-grid{grid-template-columns:repeat(2,1fr); gap:40px;} }
 .planta-item { display:flex; flex-direction:column; gap:0; }
 @media(min-width:768px){ .planta-item{flex-direction:row; gap:40px; align-items:center;} }
 .planta-img-wrap {
-  position:relative; border-radius:20px; overflow:hidden;
+  position:relative; border-radius:16px; overflow:hidden;
   flex:0 0 auto; width:100%;
   background:var(--muted);
   display:flex; align-items:center; justify-content:center;
-  min-height:300px;
+  min-height:150px;
 }
-@media(min-width:768px){ .planta-img-wrap{width:48%;} }
+@media(min-width:768px){ .planta-img-wrap{width:48%; border-radius:20px; min-height:300px;} }
 .planta-img-wrap img { width:100%; display:block; }
 
-.planta-info { padding:32px 0; }
+.planta-info { padding:14px 0; }
 @media(min-width:768px){ .planta-info{padding:0;} }
-.planta-tag { display:inline-block; padding:5px 14px; border-radius:99px; background:var(--muted); font-size:10px; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--bronze); margin-bottom:16px; }
-.planta-name { font-family:'Playfair Display',serif; font-size:2rem; font-weight:700; line-height:1.15; margin-bottom:10px; }
-.planta-area { font-size:2.4rem; font-weight:700; color:var(--bronze); line-height:1; margin-bottom:20px; }
-.planta-features { list-style:none; display:flex; flex-direction:column; gap:8px; margin-bottom:28px; }
+.planta-tag { display:inline-block; padding:4px 10px; border-radius:99px; background:var(--muted); font-size:9px; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--bronze); margin-bottom:10px; }
+@media(min-width:768px){ .planta-tag{padding:5px 14px; font-size:10px; margin-bottom:16px;} }
+.planta-name { font-family:'Playfair Display',serif; font-size:1.1rem; font-weight:700; line-height:1.2; margin-bottom:4px; }
+@media(min-width:768px){ .planta-name{font-size:2rem; line-height:1.15; margin-bottom:10px;} }
+.planta-area { font-size:1.4rem; font-weight:700; color:var(--bronze); line-height:1; margin-bottom:14px; }
+@media(min-width:768px){ .planta-area{font-size:2.4rem; margin-bottom:20px;} }
+.planta-features { list-style:none; display:none; flex-direction:column; gap:8px; margin-bottom:28px; }
+@media(min-width:768px){ .planta-features{display:flex;} }
 .planta-features li { font-size:.9rem; color:var(--muted-fg); display:flex; align-items:center; gap:8px; }
 .planta-features li::before { content:''; width:5px; height:5px; border-radius:50%; background:var(--bronze); flex-shrink:0; }
 .planta-btn {
-  display:inline-flex; align-items:center; gap:8px;
-  padding:13px 28px; border-radius:9999px;
+  display:inline-flex; align-items:center; justify-content:center; gap:6px;
+  padding:10px 12px; border-radius:9999px; width:100%;
   background:var(--charcoal); color:#fff;
-  font-size:12px; font-weight:600; letter-spacing:.06em; text-transform:uppercase;
+  font-size:10px; font-weight:600; letter-spacing:.04em; text-transform:uppercase;
   transition:opacity .2s;
 }
+@media(min-width:768px){ .planta-btn{padding:13px 28px; font-size:12px; width:auto; letter-spacing:.06em;} }
 .planta-btn:hover { opacity:.80; }
 
 /* ── CONDIÇÕES ── */
